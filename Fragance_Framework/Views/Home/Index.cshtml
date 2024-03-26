@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1">Bem-vindo ao Fragance Framework!</h1>
+                    <!-- Post meta content-->                   
+                </header>
+                <!-- Preview image figure-->
+                <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p align="justify">
+                        O Fragance Framework é um sistema desenvolvido com base no ASP.NET Core MVC, um padrão de arquitetura que organiza aplicativos da web em três componentes principais: Model, View e Controller. Adicionalmente,
+                        o Fragance Framework incorpora o ASP.NET Core Identity, que é uma estrutura de autenticação e autorização poderosa e flexível.
+                    </p>
+                    <br />
+                    <h4>Características do Fragance Framework:</h4>
+                    <strong>1. MVC (Model-View-Controller):</strong>
+                    <p align="justify">
+                        O Fragance Framework segue o padrão MVC para separar as preocupações em um aplicativo da web.<br />
+                        <strong>Model:</strong> Representa os dados e a lógica de negócios do aplicativo. No Fragance Framework, os modelos são classes que representam entidades como usuários, produtos, pedidos, etc.<br />
+                        <strong>View:</strong> Responsável pela interface do usuário. As visualizações no Fragance Framework são arquivos .cshtml que combinam HTML com código C# usando a sintaxe Razor.<br />
+                        <strong>Controller:</strong> Gerencia as solicitações do usuário, interage com o Model para obter ou manipular dados e passa esses dados para a View apropriada. Os controladores no Fragance Framework são classes que derivam da classe ControllerBase.
+                    </p>
+                    <br />
+                    <strong>2. ASP.NET Core Identity:</strong>
+                    <p align="justify">
+                        O Fragance Framework incorpora o ASP.NET Core Identity para fornecer recursos de autenticação e autorização.<br />
+
+                        <strong>Autenticação:</strong> O ASP.NET Core Identity oferece métodos para registrar, autenticar e gerenciar usuários de forma segura. Ele suporta diferentes esquemas de autenticação, incluindo cookies e tokens.<br />
+                        <strong>Autorização:</strong> Permite controlar o acesso dos usuários a recursos específicos com base em suas funções ou permissões. Isso é feito por meio de atributos de autorização nos controladores ou ações.
+                    </p>
+                    <br />
+                    <h4>Funcionamento do Fragance Framework:</h4>
+                    <ul>
+                        <li>O usuário faz uma solicitação HTTP, como acessar uma página de login.</li>
+                        <li>O ASP.NET Core MVC roteia a solicitação para o controlador apropriado no Fragance Framework.</li>
+                        <li>O controlador interage com o ASP.NET Core Identity para lidar com a autenticação do usuário, se necessário.</li>
+                        <li>O controlador solicita os dados necessários ao Model.</li>
+                        <li>O Model acessa os dados, aplica regras de negócios, se houver, e retorna os dados ao controlador.</li>
+                        <li>O controlador passa os dados para a View apropriada.</li>
+                        <li>A View renderiza os dados e os apresenta ao usuário.</li>
+                        <li>O usuário interage com a View, e o ciclo continua conforme necessário.</li>
+                    </ul>
+                    <br />
+                    <h4>Benefícios do Fragance Framework:</h4>
+                    <p align="justify">
+                        <strong>Segurança Integrada:</strong> O ASP.NET Core Identity fornece recursos robustos de autenticação e autorização para proteger o sistema Fragance Framework contra acessos não autorizados.<br />
+                        <strong>Organização e Manutenção:</strong> A arquitetura MVC ajuda a manter o código organizado e facilita sua manutenção ao longo do tempo.<br />
+                        <strong>Facilidade de Desenvolvimento:</strong> O uso do Fragance Framework simplifica o desenvolvimento de aplicativos da web, fornecendo estruturas e ferramentas poderosas.
+                    </p>
+                    <br />
+                    <p align="justify">
+                        Em resumo, o Fragance Framework é um sistema baseado no ASP.NET Core MVC que incorpora o ASP.NET Core Identity para fornecer recursos de autenticação e autorização. 
+                        Ele oferece uma estrutura robusta e flexível para o desenvolvimento de aplicativos da web seguros e escaláveis.
+                    </p>
+                   </section>
+            </article>            
+        </div>
+        <!-- Side widgets-->
+        <div class="col-lg-4">          
+            <!-- Categories widget-->
+            <div class="card mb-4">
+                <div class="card-header"> Se você tiver alguma dúvida ou sugestão fale conosco</div>
+                <div class="card-body">
+                    <p>                       
+                        <p><email endereco="jonathan.carllos1994@gmail.com" conteudo="Enviar um e-mail"></email></p>
+                        <br />                        
+                        <p>Celular: (11) 98462-6235</p>
+                        <br />                       
+                        <p>Avenida Demétrio Lêonidas Konidis 155 - 07661-160 - Terra Preta, Mairiporã - SP</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

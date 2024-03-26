@@ -1,0 +1,168 @@
+﻿@model Fragance_Framework.Entities.Envase
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Envase</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto" class="control-label"></label>
+                <input asp-for="Produto" class="form-control" />
+                <span asp-validation-for="Produto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipe" class="control-label"></label>
+                <input asp-for="Equipe" class="form-control" />
+                <span asp-validation-for="Equipe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Funcao" class="control-label"></label>
+                <input asp-for="Funcao" class="form-control" />
+                <span asp-validation-for="Funcao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Maquina" class="control-label"></label>
+                <input asp-for="Maquina" class="form-control" />
+                <span asp-validation-for="Maquina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Frasco" class="control-label"></label>
+                <input asp-for="Frasco" class="form-control" />
+                <span asp-validation-for="Frasco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tampa" class="control-label"></label>
+                <input asp-for="Tampa" class="form-control" />
+                <span asp-validation-for="Tampa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Responsavel" class="control-label"></label>
+                <input asp-for="Responsavel" class="form-control" />
+                <span asp-validation-for="Responsavel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Polivalente" class="control-label"></label>
+                <input asp-for="Polivalente" class="form-control" />
+                <span asp-validation-for="Polivalente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Referencia" class="control-label"></label>
+                <input asp-for="Referencia" class="form-control" />
+                <span asp-validation-for="Referencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label>
+                <input asp-for="Categoria" class="form-control" />
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdPrevista" class="control-label"></label>
+                <input asp-for="QtdPrevista" class="form-control" />
+                <span asp-validation-for="QtdPrevista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoteNumEnvase" class="control-label"></label>
+                <input asp-for="LoteNumEnvase" class="form-control" />
+                <span asp-validation-for="LoteNumEnvase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Validade" class="control-label"></label>
+                <input asp-for="Validade" class="form-control" />
+                <span asp-validation-for="Validade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorCodTampa" class="control-label"></label>
+                <input asp-for="CorCodTampa" class="form-control" />
+                <span asp-validation-for="CorCodTampa" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Intercorrencia" /> @Html.DisplayNameFor(model => model.Intercorrencia)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraInicial" class="control-label"></label>
+                <input asp-for="HoraInicial" class="form-control" />
+                <span asp-validation-for="HoraInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraFinal" class="control-label"></label>
+                <input asp-for="HoraFinal" class="form-control" />
+                <span asp-validation-for="HoraFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdFinal" class="control-label"></label>
+                <input asp-for="QtdFinal" class="form-control" />
+                <span asp-validation-for="QtdFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LimpezaInicio" class="control-label"></label>
+                <input asp-for="LimpezaInicio" class="form-control" />
+                <span asp-validation-for="LimpezaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LimpezaFinal" class="control-label"></label>
+                <input asp-for="LimpezaFinal" class="form-control" />
+                <span asp-validation-for="LimpezaFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CodBulkGranel" /> @Html.DisplayNameFor(model => model.CodBulkGranel)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="HorarioAquecimentoFusor" class="control-label"></label>
+                <input asp-for="HorarioAquecimentoFusor" class="form-control" />
+                <span asp-validation-for="HorarioAquecimentoFusor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Processo" class="control-label"></label>
+                <input asp-for="Processo" class="form-control" />
+                <span asp-validation-for="Processo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescricaoIntercorrencia" class="control-label"></label>
+                <input asp-for="DescricaoIntercorrencia" class="form-control" />
+                <span asp-validation-for="DescricaoIntercorrencia" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ProducaoLiberada" /> @Html.DisplayNameFor(model => model.ProducaoLiberada)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
