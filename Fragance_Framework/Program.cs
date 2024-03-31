@@ -73,6 +73,11 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name:"MinhaArea",
+     pattern: "{area:exists}/{controller=User}/{action=Index}/{id?}");
+    
+
 app.Run();
 
 async Task CriarPerfisUsuariosAsync(WebApplication app)

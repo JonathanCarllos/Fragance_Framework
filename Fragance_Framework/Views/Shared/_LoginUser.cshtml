@@ -4,10 +4,10 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    @if (User.IsInRole("Admin"))
+    @if (User.IsInRole("User"))
     {
         <li class="nav-item">
-            <a class="nav-link text-link" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
+            <a class="nav-link text-link" asp-area="User" asp-controller="User" asp-action="Index">User</a>
         </li>
     }
 }

@@ -1,10 +1,13 @@
 ﻿@model IEnumerable<Fragance_Framework.Entities.Envase>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de Envase";
 }
 
-<h1>Index</h1>
+<div class="text-center">
+    <h1>Lista de Envase Setup</h1>
+</div>
+
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -28,170 +31,39 @@
                 @Html.DisplayNameFor(model => model.Data)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Maquina)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Frasco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tampa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Responsavel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Polivalente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Referencia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtdPrevista)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LoteNumEnvase)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Validade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CorCodTampa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Intercorrencia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Observacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraInicial)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraFinal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QtdFinal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LimpezaInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LimpezaFinal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodBulkGranel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HorarioAquecimentoFusor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Processo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescricaoIntercorrencia)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.ProducaoLiberada)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Produto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Equipe)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Funcao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Maquina)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Frasco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tampa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Responsavel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Polivalente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Referencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtdPrevista)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoteNumEnvase)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Validade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CorCodTampa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Intercorrencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraInicial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraFinal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtdFinal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LimpezaInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LimpezaFinal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodBulkGranel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HorarioAquecimentoFusor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Processo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DescricaoIntercorrencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProducaoLiberada)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.EnvaseSetupId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EnvaseSetupId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EnvaseSetupId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Equipe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Funcao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProducaoLiberada)
+                </td>
+                <td align="right">
+                    <a asp-action="Edit" asp-route-id="@item.EnvaseSetupId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.EnvaseSetupId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.EnvaseSetupId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
