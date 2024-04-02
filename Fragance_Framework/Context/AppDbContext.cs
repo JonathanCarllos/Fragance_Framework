@@ -8,6 +8,8 @@ namespace Fragance_Framework.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Envase>? EnvasesSetup { get; set; }
+        public DbSet<Envase>? EnvasesSetup { get; set; } 
+        public DbSet<Maquiagens>? Maquiagens { get; set; }
     }
 }
+
