@@ -12,7 +12,7 @@ namespace Fragance_Framework.Entities
         public string? Linha { get; set; }
         public string? Cor { get; set; }
 
-        [Display(Name = "Descrição do Produto Fiscal")]
+        [Display(Name = "Desc. Produto Fiscal")]
         public string? DescricaoProdutoFiscal { get; set; }
 
         [Display(Name = "Unidade Solto")]
@@ -25,10 +25,10 @@ namespace Fragance_Framework.Entities
 
         public string? NCM { get; set; }
 
-        [Display(Name = "Quantidade por Caixa")]
+        [Display(Name = "Qtd. por Caixa")]
         public string? QtdCaixa { get; set; }
 
-        [Display(Name = "Quantidade por Cartucho")]
+        [Display(Name = "Qtd. por Cartucho")]
         public string? QtdCartucho { get; set; }
 
         public double Altura { get; set; }

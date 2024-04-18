@@ -1,5 +1,51 @@
 ﻿@model IEnumerable<Fragance_Framework.Entities.Maquiagens>
 
 @{
-    ViewData["Title"] = "Lista de Envase";
+    ViewData["Title"] = "Lista de Maquiagens";
 }
+
+<div class="text-center">
+    <h1>Lista de Maquiagens</h1>
+</div>
+
+<p>
+    <a asp-action="Create">Criar um novo produto</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodInterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach( var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodInterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Linha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </td>
+                <td align="right">
+                    <a asp-action="Edit" asp-route-id="@item.MaquiagensId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaquiagensId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaquiagensId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
