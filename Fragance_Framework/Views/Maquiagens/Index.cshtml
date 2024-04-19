@@ -9,7 +9,7 @@
 </div>
 
 <p>
-    <a asp-action="Create">Criar um novo produto</a>
+    <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Criar um novo produto</a>
 </p>
 
 <table class="table">
@@ -41,9 +41,9 @@
                     @Html.DisplayFor(modelItem => item.Cor)
                 </td>
                 <td align="right">
-                    <a asp-action="Edit" asp-route-id="@item.MaquiagensId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.MaquiagensId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.MaquiagensId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.MaquiagensId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.MaquiagensId" class="btn btn-warning"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.MaquiagensId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         }

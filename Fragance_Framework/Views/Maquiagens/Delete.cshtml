@@ -1,0 +1,105 @@
+﻿@model Fragance_Framework.Entities.Maquiagens
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="text-center">
+    <h1>Tem Certeza que deseja excluir?</h1>
+</div>
+
+<div>
+    <h4>Maquiagem</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CodInterno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CodInterno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Linha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Linha)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DescricaoProdutoFiscal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescricaoProdutoFiscal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnidadeSolto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnidadeSolto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cartucho)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cartucho)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CaixaEmbarque)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CaixaEmbarque)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NCM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NCM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QtdCaixa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QtdCaixa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QtdCartucho)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QtdCartucho)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Altura)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Altura)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Largura)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Largura)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Profundidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Profundidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+    </dl>
+</div>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MaquiagensId" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Volta para a lista</a>
+    </form>
+</div>
