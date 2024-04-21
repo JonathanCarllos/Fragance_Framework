@@ -1,10 +1,10 @@
-﻿@model Fragance_Framework.Entities.Maquiagens
+﻿@model Maquiagens
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Delete";
 }
 <div class="text-center">
-    <h1>Detalhes</h1>
+    <h1>Tem Certeza que deseja excluir?</h1>
 </div>
 
 <div>
@@ -98,5 +98,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaquiagensId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a> <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Volta para a lista</a>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="MaquiagensId" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Volta para a lista</a>
+    </form>
 </div>

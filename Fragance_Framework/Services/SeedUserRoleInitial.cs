@@ -36,15 +36,15 @@ namespace Fragance_Framework.Services
             }
 
 
-            if (!await _roleManager.RoleExistsAsync("Gerente"))
-            {
-                IdentityRole role = new IdentityRole();
-                role.Name = "Gerente";
-                role.NormalizedName = "GERENTE";
-                role.ConcurrencyStamp = Guid.NewGuid().ToString();
+            //if (!await _roleManager.RoleExistsAsync("Gerente"))
+            //{
+            //    IdentityRole role = new IdentityRole();
+            //    role.Name = "Gerente";
+            //    role.NormalizedName = "GERENTE";
+            //    role.ConcurrencyStamp = Guid.NewGuid().ToString();
 
-                IdentityResult roleResult = await _roleManager.CreateAsync(role);
-            }
+            //    IdentityResult roleResult = await _roleManager.CreateAsync(role);
+            //}
         }
 
         public async Task SeedUsersAsync()
@@ -89,25 +89,25 @@ namespace Fragance_Framework.Services
                 }
             }
 
-            if (await _userManager.FindByEmailAsync("gerente@localhost.com") == null)
-            {
-                IdentityUser user = new IdentityUser();
-                user.UserName = "gerente@localhost.com";
-                user.Email = "gerente@localhost.com";
-                user.NormalizedUserName = "GERENTE@LOCALHOST.COM";
-                user.NormalizedEmail = "GERENTE@LOCALHOST.COM";
-                user.EmailConfirmed = true;
-                user.LockoutEnabled = false;
+            //if (await _userManager.FindByEmailAsync("gerente@localhost.com") == null)
+            //{
+            //    IdentityUser user = new IdentityUser();
+            //    user.UserName = "gerente@localhost.com";
+            //    user.Email = "gerente@localhost.com";
+            //    user.NormalizedUserName = "GERENTE@LOCALHOST.COM";
+            //    user.NormalizedEmail = "GERENTE@LOCALHOST.COM";
+            //    user.EmailConfirmed = true;
+            //    user.LockoutEnabled = false;
 
-                user.SecurityStamp = Guid.NewGuid().ToString();
+            //    user.SecurityStamp = Guid.NewGuid().ToString();
 
-                IdentityResult result = await _userManager.CreateAsync(user, "Aezakmi@2024");
+            //    IdentityResult result = await _userManager.CreateAsync(user, "Aezakmi@2024");
 
-                if (result.Succeeded)
-                {
-                    await _userManager.AddToRoleAsync(user, "Gerente");
-                }
-            }
+            //    if (result.Succeeded)
+            //    {
+            //        await _userManager.AddToRoleAsync(user, "Gerente");
+            //    }
+            //}
         }
     }
 }

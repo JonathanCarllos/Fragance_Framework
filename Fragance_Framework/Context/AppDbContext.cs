@@ -1,4 +1,5 @@
-﻿using Fragance_Framework.Entities;
+﻿using Fragance_Framework.Areas.Admin.Models;
+using Fragance_Framework.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

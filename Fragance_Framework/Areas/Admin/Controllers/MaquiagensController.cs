@@ -1,10 +1,13 @@
-﻿using Fragance_Framework.Context;
-using Fragance_Framework.Entities;
+﻿using Fragance_Framework.Areas.Admin.Models;
+using Fragance_Framework.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Fragance_Framework.Controllers
+namespace Fragance_Framework.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+    [Authorize("Admin")]
     public class MaquiagensController : Controller
     {
         private readonly AppDbContext _context;
@@ -50,7 +53,7 @@ namespace Fragance_Framework.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]       
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaquiagensId,CodInterno,Linha,Cor,DescricaoProdutoFiscal,UnidadeSolto,Cartucho,CaixaEmbarque,NCM,QtdCaixa,QtdCartucho,Altura,Largura,Profundidade,Peso")] Maquiagens maquiagens)
         {
             if (ModelState.IsValid)
@@ -116,14 +119,14 @@ namespace Fragance_Framework.Controllers
         //Delete HttpGet
         public async Task<IActionResult> Delete(int? id)
         {
-            if(id == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
             var delete = await _context.Maquiagens.FindAsync(id);
 
-            if(delete == null)
+            if (delete == null)
             {
                 return NotFound();
             }

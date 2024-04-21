@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Fragance_Framework.Entities.Maquiagens>
+﻿@model IEnumerable<Maquiagens>
 
 @{
-    ViewData["Title"] = "Lista de Maquiagens";
+    ViewData["Title"] = "Lista de Maquiagens";   
 }
 
 <div class="text-center">
@@ -12,7 +12,7 @@
     <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Criar um novo produto</a>
 </p>
 
-<table class="table">
+<table class="table" id="myTable">
     <thead>
         <tr>
             <th>

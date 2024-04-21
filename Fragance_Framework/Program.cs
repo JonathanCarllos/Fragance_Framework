@@ -41,9 +41,13 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("RequireUserAdminGerenteRole",
-         policy => policy.RequireRole("User", "Admin", "Gerente"));
+    options.AddPolicy("Admin",
+        politica =>
+        {
+            politica.RequireRole("Admin");
+        });
 });
+
 
 builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
