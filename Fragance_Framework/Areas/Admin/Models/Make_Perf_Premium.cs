@@ -2,7 +2,7 @@
 
 namespace Fragance_Framework.Areas.Admin.Models
 {
-    public class MakePerfPremium
+    public class Make_Perf_Premium
     {
         //Dados Logisticos
         public int MakePerfPremiumId { get; set; }
