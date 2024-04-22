@@ -30,7 +30,7 @@ namespace Fragance_Framework.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")]Make_Perf_Premium make_Perf_Premium)
+        public async Task<IActionResult> Create([Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")]MakePerfPremium make_Perf_Premium)
         {
             if (ModelState.IsValid)
             {

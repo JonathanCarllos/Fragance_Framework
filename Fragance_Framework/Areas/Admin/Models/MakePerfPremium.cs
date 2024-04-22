@@ -2,10 +2,10 @@
 
 namespace Fragance_Framework.Areas.Admin.Models
 {
-    public class Make_Perf_Premium
+    public class MakePerfPremium
     {
         //Dados Logisticos
-        public int MakePerfPremiumId { get; set; }
+        public int MakePerfPremiumId{ get; set; }
 
         [Required(ErrorMessage ="Campo obrigatório")]
         [Display(Name ="Cód. Interno Avulso")]

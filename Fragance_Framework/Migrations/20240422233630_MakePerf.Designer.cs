@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fragance_Framework.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240422000618_MakePerfPremium")]
-    partial class MakePerfPremium
+    [Migration("20240422233630_MakePerf")]
+    partial class MakePerf
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
