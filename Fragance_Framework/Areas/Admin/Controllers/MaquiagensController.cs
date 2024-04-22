@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Fragance_Framework.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize("Admin")]
+    [Authorize(Roles = "Admin")]
     public class MaquiagensController : Controller
     {
         private readonly AppDbContext _context;

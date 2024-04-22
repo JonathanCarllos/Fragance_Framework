@@ -1,7 +1,9 @@
 ﻿@model IdentityRole
 
-<h3>Confirma a exclusão desta role ?</h3>
-<div>    
+<div class="text-center">
+    <h3>Confirma a exclusão desta role ?</h3>
+</div>
+<div>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -14,7 +16,7 @@
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="@Model.Id" />
-        <input type="submit" value="Deletar" class="btn btn-danger" /> |
-        <a asp-action="Index">Retornar</a>
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Retornar a lista</a>
     </form>
 </div>

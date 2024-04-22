@@ -1,9 +1,11 @@
 ﻿using Fragance_Framework.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fragance_Framework.Controllers
 {
+
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -22,6 +24,7 @@ namespace Fragance_Framework.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
