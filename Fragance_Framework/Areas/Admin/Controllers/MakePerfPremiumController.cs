@@ -12,6 +12,11 @@ namespace Fragance_Framework.Areas.Admin.Controllers
     {
         private readonly AppDbContext _context;
 
+        private bool MakePerfExists(int id)
+        {
+            return _context.MakePerfPremium.Any(e => e.MakePerfPremiumId == id);
+        }
+
         public MakePerfPremiumController(AppDbContext context)
         {
             _context = context;
@@ -39,6 +44,53 @@ namespace Fragance_Framework.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(make_Perf_Premium);
+        }
+
+        public async Task<IActionResult> Edit(int? Id)
+        {
+            if(Id == null)
+            {
+                return NotFound();
+            }
+
+            var editar = await _context.MakePerfPremium.FindAsync(Id);
+            if(editar == null)
+            {
+                return NotFound();
+            }
+            return View(editar);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int Id,[Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")]MakePerfPremium makePerf)
+        {
+            if(Id != makePerf.MakePerfPremiumId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(makePerf);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!MakePerfExists(makePerf.MakePerfPremiumId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(makePerf);
         }
     }
 }

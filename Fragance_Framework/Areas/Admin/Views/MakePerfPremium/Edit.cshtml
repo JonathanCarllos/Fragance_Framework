@@ -1,20 +1,21 @@
 ﻿@model MakePerfPremium
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 <br />
 <div class="card">
     <div class="card-header">
         <div class="text-center">
-            <h1>Cadastrar novo produto</h1>
+            <h1>Atualizar produto</h1>
         </div>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <form asp-action="Create">
+                <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="MakePerfPremiumId" />
                     <div class="row">
                         <div class="row">
                             <div class="col-4">
