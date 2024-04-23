@@ -5,15 +5,15 @@ namespace Fragance_Framework.Areas.Admin.Models
     public class MakePerfPremium
     {
         //Dados Logisticos
-        public int MakePerfPremiumId{ get; set; }
+        public int MakePerfPremiumId { get; set; }
 
-        [Required(ErrorMessage ="Campo obrigatório")]
-        [Display(Name ="Cód. Interno Avulso")]
+        [Required(ErrorMessage = "Campo obrigatório")]
+        [Display(Name = "Cód. Interno Avulso")]
         [StringLength(100)]
         public string? CodInternoAvulso { get; set; }
 
-        [Required(ErrorMessage ="Campo obrigatório")]
-        [StringLength (100)]
+        [Required(ErrorMessage = "Campo obrigatório")]
+        [StringLength(100)]
         public string? Linha { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
@@ -22,7 +22,7 @@ namespace Fragance_Framework.Areas.Admin.Models
 
         [Required(ErrorMessage = "Campo obrigatório")]
         [StringLength(100)]
-        [Display(Name ="Desc. Produto Fiscal")]
+        [Display(Name = "Desc. Produto Fiscal")]
         public string? DescProdutoFiscal { get; set; }
 
         //Top Beauty Make Up Studio
@@ -37,7 +37,7 @@ namespace Fragance_Framework.Areas.Admin.Models
 
         [Required(ErrorMessage = "Campo obrigatório")]
         [StringLength(100)]
-        [Display(Name ="Cx Embarque")]
+        [Display(Name = "Cx Embarque")]
         public string? CaixaEmbarque { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
@@ -46,33 +46,29 @@ namespace Fragance_Framework.Areas.Admin.Models
 
         [Required(ErrorMessage = "Campo obrigatório")]
         [StringLength(100)]
-        [Display(Name ="N° Processos")]
+        [Display(Name = "N° Processos")]
         public string? NumProcesso { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
         [StringLength(100)]
-        [Display(Name ="Qtd Caixa")]
+        [Display(Name = "Qtd Caixa")]
         public string? QtdCaixa { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
         [StringLength(100)]
         [Display(Name = "Qtd Cartucho")]
-        public string? QtdCartucho { get; set;}
+        public string? QtdCartucho { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        [StringLength(100)]
         public double Altura { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        [StringLength(100)]
         public double Largura { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        [StringLength(100)]
         public double Profundidade { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        [StringLength(100)]
         public double Peso { get; set; }
 
     }
