@@ -35,7 +35,7 @@ namespace Fragance_Framework.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")]MakePerfPremium make_Perf_Premium)
+        public async Task<IActionResult> Create([Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")] MakePerfPremium make_Perf_Premium)
         {
             if (ModelState.IsValid)
             {
@@ -48,13 +48,13 @@ namespace Fragance_Framework.Areas.Admin.Controllers
 
         public async Task<IActionResult> Edit(int? Id)
         {
-            if(Id == null)
+            if (Id == null)
             {
                 return NotFound();
             }
 
             var editar = await _context.MakePerfPremium.FindAsync(Id);
-            if(editar == null)
+            if (editar == null)
             {
                 return NotFound();
             }
@@ -63,9 +63,9 @@ namespace Fragance_Framework.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int Id,[Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")]MakePerfPremium makePerf)
+        public async Task<IActionResult> Edit(int Id, [Bind("MakePerfPremiumId, CodInternoAvulso, Linha, Cor, DescProdutoFiscal, UnidadeSolto, Cartucho, CaixaEmbarque, NCM, NumProcesso, QtdCaixa, QtdCartucho, Altura, Largura,Profundidade, Peso")] MakePerfPremium makePerf)
         {
-            if(Id != makePerf.MakePerfPremiumId)
+            if (Id != makePerf.MakePerfPremiumId)
             {
                 return NotFound();
             }
@@ -91,6 +91,48 @@ namespace Fragance_Framework.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(makePerf);
+        }
+
+        public async Task<IActionResult> Details(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var detalhes = await _context.MakePerfPremium.FirstOrDefaultAsync(d => d.MakePerfPremiumId == Id);
+            if(detalhes == null)
+            {
+                return NotFound();
+            }
+            return View(detalhes);
+        }
+
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var delete = await _context.MakePerfPremium.FindAsync(Id);
+
+            if(delete == null)
+            {
+                return NotFound();
+            }
+
+            return View(delete);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmado(int? Id)
+        {
+            var delete = await _context.MakePerfPremium.FindAsync(Id);
+            _context.MakePerfPremium.Remove(delete);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
