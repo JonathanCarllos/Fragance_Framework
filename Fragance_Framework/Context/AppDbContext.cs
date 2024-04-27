@@ -12,6 +12,7 @@ namespace Fragance_Framework.Context
         public DbSet<Envase>? EnvasesSetup { get; set; } 
         public DbSet<Maquiagens>? Maquiagens { get; set; }
         public DbSet<MakePerfPremium>? MakePerfPremium { get; set; }
+        public DbSet<TopBeauty>? TopBeauty { get; set; }
     }
 }
 

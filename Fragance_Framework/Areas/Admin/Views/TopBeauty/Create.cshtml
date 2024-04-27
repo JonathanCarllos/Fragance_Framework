@@ -1,0 +1,227 @@
+﻿@model TopBeauty
+
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+<div class="card">
+    <div class="card-header">
+        <div class="text-center">
+            <h1>
+                Cadastrar novo Produto
+            </h1>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="CodInternoAvulso" class="control-label"></label>
+                            <input asp-for="CodInternoAvulso" class="form-control" />
+                            <span asp-validation-for="CodInternoAvulso" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Linha" class="control-label"></label>
+                            <input asp-for="Linha" class="form-control" />
+                            <span asp-validation-for="Linha" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="DescProduto" class="control-label"></label>
+                            <input asp-for="DescProduto" class="form-control" />
+                            <span asp-validation-for="DescProduto" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <h3>Esmalte Avulso </h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="UnidadeSolto" class="control-label"></label>
+                            <input asp-for="UnidadeSolto" class="form-control" />
+                            <span asp-validation-for="UnidadeSolto" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Cartucho" class="control-label"></label>
+                            <input asp-for="Cartucho" class="form-control" />
+                            <span asp-validation-for="Cartucho" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="CaixaEmbalagem" class="control-label"></label>
+                            <input asp-for="CaixaEmbalagem" class="form-control" />
+                            <span asp-validation-for="CaixaEmbalagem" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <h3>Esmalte Blister</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="UnidadeBlister" class="control-label"></label>
+                            <input asp-for="UnidadeBlister" class="form-control" />
+                            <span asp-validation-for="UnidadeBlister" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Cartucho12" class="control-label"></label>
+                            <input asp-for="Cartucho12" class="form-control" />
+                            <span asp-validation-for="Cartucho12" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="CaixaEmbalagem144" class="control-label"></label>
+                            <input asp-for="CaixaEmbalagem144" class="form-control" />
+                            <span asp-validation-for="CaixaEmbalagem144" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-4">
+                                <label asp-for="NumProcesso" class="control-label"></label>
+                                <input asp-for="NumProcesso" class="form-control" />
+                                <span asp-validation-for="NumProcesso" class="text-danger"></span>
+                            </div>
+                            <div class="col-4">
+                                <label asp-for="NCM" class="control-label"></label>
+                                <input asp-for="NCM" class="form-control" />
+                                <span asp-validation-for="NCM" class="text-danger"></span>
+                            </div>
+                            <div class="col-4">
+                                <label asp-for="QtdCaixa" class="control-label"></label>
+                                <input asp-for="QtdCaixa" class="form-control" />
+                                <span asp-validation-for="QtdCaixa" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-4">
+                                <label asp-for="QtdCartucho" class="control-label"></label>
+                                <input asp-for="QtdCartucho" class="form-control" />
+                                <span asp-validation-for="QtdCartucho" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <h3>Medidas e Pesos <strong>PRODUTOS</strong> Esmaltes <strong>a vulso</strong></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Altura" class="control-label"></label>
+                            <input asp-for="Altura" class="form-control" />
+                            <span asp-validation-for="Altura" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Largura" class="control-label"></label>
+                            <input asp-for="Largura" class="form-control" />
+                            <span asp-validation-for="Largura" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Profundidade" class="control-label"></label>
+                            <input asp-for="Profundidade" class="form-control" />
+                            <span asp-validation-for="Profundidade" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Peso" class="control-label"></label>
+                            <input asp-for="Peso" class="form-control" />
+                            <span asp-validation-for="Peso" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <h3>Medidas da <strong>Caixa de Embarque</strong> e Peso Esmalte <strong>a Avulso</strong></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Altura2" class="control-label"></label>
+                            <input asp-for="Altura2" class="form-control" />
+                            <span asp-validation-for="Altura2" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Largura2" class="control-label"></label>
+                            <input asp-for="Largura2" class="form-control" />
+                            <span asp-validation-for="Largura2" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Profundidade2" class="control-label"></label>
+                            <input asp-for="Profundidade2" class="form-control" />
+                            <span asp-validation-for="Profundidade2" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Peso2" class="control-label"></label>
+                            <input asp-for="Peso2" class="form-control" />
+                            <span asp-validation-for="Peso2" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <h3>Medidas da <strong>Caixa de Embarque</strong> e Peso Esmalte Blister</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Altura3" class="control-label"></label>
+                            <input asp-for="Altura3" class="form-control" />
+                            <span asp-validation-for="Altura3" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Largura3" class="control-label"></label>
+                            <input asp-for="Largura3" class="form-control" />
+                            <span asp-validation-for="Largura3" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Profundidade3" class="control-label"></label>
+                            <input asp-for="Profundidade3" class="form-control" />
+                            <span asp-validation-for="Profundidade3" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Peso3" class="control-label"></label>
+                            <input asp-for="Peso3" class="form-control" />
+                            <span asp-validation-for="Peso3" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <h3>Medidas e Peso <strong>PRODUTOS</strong> Esmalte Blister</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Altura4" class="control-label"></label>
+                            <input asp-for="Altura4" class="form-control" />
+                            <span asp-validation-for="Altura4" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Largura4" class="control-label"></label>
+                            <input asp-for="Largura4" class="form-control" />
+                            <span asp-validation-for="Largura4" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="Profundidade4" class="control-label"></label>
+                            <input asp-for="Profundidade4" class="form-control" />
+                            <span asp-validation-for="Profundidade4" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Peso4" class="control-label"></label>
+                            <input asp-for="Peso4" class="form-control" />
+                            <span asp-validation-for="Peso4" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group" align="right">
+                        <input type="submit" value="Salvar" class="btn btn-primary" /> <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Volta para a lista</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

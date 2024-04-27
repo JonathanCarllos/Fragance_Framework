@@ -29,7 +29,7 @@ namespace Fragance_Framework.Areas.Admin.Models
         [StringLength(100)]
         public string? Cartucho { get; set;} //com 6 unidades
 
-        [Display(Name = "Cx Embaalagem 120 unid.")]
+        [Display(Name = "Cx Embalagem 120 unid.")]
         [StringLength(100)]
         public string? CaixaEmbalagem { get; set; } //Cx. Emb. 120 unid
 
@@ -62,45 +62,50 @@ namespace Fragance_Framework.Areas.Admin.Models
         public string? QtdCartucho { get; set; }
 
         //MEDIDAS E PESO PRODUTOS ESMALTE A VULSO
+        [Display(Name = "Altura mm")]
         public double Altura { get; set; }
+
+        [Display(Name = "Largura mm")]
         public double Largura {  get; set; }
+
+        [Display(Name = "Profundidade mm")]
         public double Profundidade {  get; set; }
         public double Peso { get; set; }
 
         //MEDIDAS CAIXA EMBARQUE E PESO ESMALTE A VULSO
-        [Display(Name = "Altura")]
+        [Display(Name = "Altura mm")]
         public double Altura2 { get; set; }
 
-        [Display(Name = "Largura")]
+        [Display(Name = "Largura mm")]
         public double Largura2 { get; set; }
 
-        [Display(Name = "Profundidade")]
+        [Display(Name = "Profundidade mm")]
         public double Profundidade2 { get; set; }
 
         [Display(Name = "Peso")]
         public double Peso2 { get; set; }
 
         //MEDIDAS CAIXA EMBARQUE E PESO ESMALTE BLISTER
-        [Display(Name = "Altura")]
+        [Display(Name = "Altura mm")]
         public double Altura3 { get; set; }
 
-        [Display(Name = "Largura")]
+        [Display(Name = "Largura mm")]
         public double Largura3 { get; set; }
 
-        [Display(Name = "Profundidade")]
+        [Display(Name = "Profundidade mm")]
         public double Profundidade3 { get; set; }
 
         [Display(Name = "Peso")]
         public double Peso3 { get; set; }
 
         //MEDIDAS E PESO PRODUTOS ESMALTE BLISTER
-        [Display(Name = "Altura")]
+        [Display(Name = "Altura mm")]
         public double Altura4 { get; set; }
 
-        [Display(Name = "Largura")]
+        [Display(Name = "Largura mm")]
         public double Largura4 { get; set; }
 
-        [Display(Name = "Profundidade")]
+        [Display(Name = "Profundidade mm")]
         public double Profundidade4 { get; set; }
 
         [Display(Name = "Peso")]
