@@ -72,12 +72,12 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             "CaixaEmbalagem144,NumProcesso,NCM,QtdCaixa,QtdCartucho,Altura,Largura,Profundidade,Peso,Altura2,Largura2,Profundidade2,Peso2," +
             "Altura3,Largura3,Profundidade3,Peso3,Altura4,Largura4,Profundidade4,Peso4")]TopBeauty topBeauty)
         {
-            if(Id != topBeauty.TopBeautyId)
+            if (Id != topBeauty.TopBeautyId)
             {
                 return NotFound();
             }
 
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 try
                 {
@@ -99,6 +99,48 @@ namespace Fragance_Framework.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(topBeauty);
+        }
+
+        public async Task<IActionResult> Details(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var Detalhes = await _context.TopBeauty.FirstOrDefaultAsync(m => m.TopBeautyId == Id);
+            if (Detalhes == null)
+            {
+                return NotFound();
+            }
+
+            return View(Detalhes);
+        }
+
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var Delete = await _context.TopBeauty.FindAsync(Id);
+            if (Delete == null)
+            {
+                return NotFound();
+            }
+
+            return View(Delete);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmado(int? id)
+        {
+            var delete = await _context.TopBeauty.FindAsync(id);
+            _context.TopBeauty.Remove(delete);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 
