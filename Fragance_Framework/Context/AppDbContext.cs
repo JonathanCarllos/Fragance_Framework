@@ -13,6 +13,7 @@ namespace Fragance_Framework.Context
         public DbSet<Maquiagens>? Maquiagens { get; set; }
         public DbSet<MakePerfPremium>? MakePerfPremium { get; set; }
         public DbSet<TopBeauty>? TopBeauty { get; set; }
+        public DbSet<Premium>? Premium { get; set; }
     }
 }
 
