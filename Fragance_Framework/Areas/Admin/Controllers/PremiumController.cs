@@ -22,5 +22,24 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             var lista = await _context.Premium.ToListAsync();
             return View(lista);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("PremiumId,CodSistema,Linha,DescProduto,DescProdutoFiscal,UnidadeSolto,Cartucho,CaixaEmbalagem," +
+            "NumProcesso,NCM,QtdCaixa,QtdCartucho,Altura,Largura,Profundidade,Peso")] Premium premium)
+        {
+            if(ModelState.IsValid)
+            {
+                var criar = _context.Premium.Add(premium);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(premium);
+        }
     }
 }
