@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PremiumGel>
+
+@{
+    ViewData["Title"] = "Lista Premium Gel";
+}
+
+<div class="text-center">
+    <h3>Lista Premium Gel</h3>
+</div>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Criar um novo produto</a>
+</p>
+
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodSistema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescProdutoFiscal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodSistema)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Linha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescProdutoFiscal)
+                </td>
+                <td align="right">
+                    <a asp-action="Edit" asp-route-id="@item.PremiumGelId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.PremiumGelId" class="btn btn-warning"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.PremiumGelId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>>

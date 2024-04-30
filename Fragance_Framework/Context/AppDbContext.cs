@@ -14,6 +14,7 @@ namespace Fragance_Framework.Context
         public DbSet<MakePerfPremium>? MakePerfPremium { get; set; }
         public DbSet<TopBeauty>? TopBeauty { get; set; }
         public DbSet<Premium>? Premium { get; set; }
+        public DbSet<PremiumGel>? PremiumGel { get; set; }
     }
 }
 
