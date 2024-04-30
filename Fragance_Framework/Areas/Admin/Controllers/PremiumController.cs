@@ -113,5 +113,31 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             return View(detalhes);
         }
 
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if(Id == null)
+            {
+                return NotFound();
+            }
+
+            var delete = await _context.Premium.FindAsync(Id);
+            if(delete == null)
+            {
+                return NotFound();
+            }
+
+            return View(delete);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmado(int? Id)
+        {
+            var delete = await _context.Premium.FindAsync(Id);
+            _context.Premium.Remove(delete);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
