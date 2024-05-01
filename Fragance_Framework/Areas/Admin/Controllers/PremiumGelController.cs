@@ -1,10 +1,13 @@
 ﻿using Fragance_Framework.Areas.Admin.Models;
 using Fragance_Framework.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fragance_Framework.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class PremiumGelController : Controller
     {
         private readonly AppDbContext _context;
@@ -125,6 +128,16 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             }
 
             return View(delete);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmado(int? Id)
+        {
+            var delete = await _context.PremiumGel.FindAsync(Id);
+            _context.PremiumGel.Remove(delete);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
