@@ -92,5 +92,39 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             }
             return View(premiumGel);
         }
+
+        public async Task<IActionResult> Details(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var detalhes = await _context.PremiumGel.FindAsync(Id);
+
+            if (detalhes == null)
+            {
+                return NotFound();
+            }
+
+            return View(detalhes);
+        }
+
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var delete = await _context.PremiumGel.FindAsync(Id);
+
+            if (delete == null)
+            {
+                return NotFound();
+            }
+
+            return View(delete);
+        }
     }
 }
