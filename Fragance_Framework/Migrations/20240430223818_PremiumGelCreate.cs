@@ -14,8 +14,7 @@ namespace Fragance_Framework.Migrations
                 columns: table => new
                 {
                     PremiumGelId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    PremiumId = table.Column<int>(type: "int", nullable: false),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),                   
                     CodSistema = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Linha = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
