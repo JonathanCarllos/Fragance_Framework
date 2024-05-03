@@ -57,6 +57,7 @@ namespace Fragance_Framework.Areas.Admin.Models
       
         [Required(ErrorMessage = "Campo obrigatório")]
         [Display(Name = "NCM")]
-        public double NCM { get; set; }
+        [StringLength (100)]
+        public string? NCM { get; set; }
     }
 }

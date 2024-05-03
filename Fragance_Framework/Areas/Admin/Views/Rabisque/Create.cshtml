@@ -1,4 +1,4 @@
-﻿@model PremiumGel
+﻿@model Rabisque
 
 @{
     ViewData["Title"] = "Create";
@@ -7,9 +7,7 @@
 <div class="card">
     <div class="card-header">
         <div class="text-center">
-            <h1>
-                Cadastrar novo Produto
-            </h1>
+            <h1>Cadastrar novo produto</h1>
         </div>
     </div>
     <div class="card-body">
@@ -38,7 +36,7 @@
                             <input asp-for="DescProdutoFiscal" class="form-control" />
                             <span asp-validation-for="DescProdutoFiscal" class="text-danger"></span>
                         </div>
-                    </div>                   
+                    </div>
                     <div class="row">
                         <div class="col-4">
                             <label asp-for="UnidadeSolto" class="control-label"></label>
@@ -63,11 +61,6 @@
                             <span asp-validation-for="NumProcesso" class="text-danger"></span>
                         </div>
                         <div class="col-3">
-                            <label asp-for="NCM" class="control-label"></label>
-                            <input asp-for="NCM" class="form-control" />
-                            <span asp-validation-for="NCM" class="text-danger"></span>
-                        </div>
-                        <div class="col-3">
                             <label asp-for="QtdCaixa" class="control-label"></label>
                             <input asp-for="QtdCaixa" class="form-control" />
                             <span asp-validation-for="QtdCaixa" class="text-danger"></span>
@@ -77,27 +70,10 @@
                             <input asp-for="QtdCartucho" class="form-control" />
                             <span asp-validation-for="QtdCartucho" class="text-danger"></span>
                         </div>
-                    </div>                   
-                    <div class="row">
                         <div class="col-3">
-                            <label asp-for="Altura" class="control-label"></label>
-                            <input asp-for="Altura" class="form-control" />
-                            <span asp-validation-for="Altura" class="text-danger"></span>
-                        </div>
-                        <div class="col-3">
-                            <label asp-for="Largura" class="control-label"></label>
-                            <input asp-for="Largura" class="form-control" />
-                            <span asp-validation-for="Largura" class="text-danger"></span>
-                        </div>
-                        <div class="col-3">
-                            <label asp-for="Profundidade" class="control-label"></label>
-                            <input asp-for="Profundidade" class="form-control" />
-                            <span asp-validation-for="Profundidade" class="text-danger"></span>
-                        </div>
-                        <div class="col-3">
-                            <label asp-for="Peso" class="control-label"></label>
-                            <input asp-for="Peso" class="form-control" />
-                            <span asp-validation-for="Peso" class="text-danger"></span>
+                            <label asp-for="NCM" class="control-label"></label>
+                            <input asp-for="NCM" class="form-control" />
+                            <span asp-validation-for="NCM" class="text-danger"></span>
                         </div>
                     </div>
                     <br />
