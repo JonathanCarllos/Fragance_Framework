@@ -1,0 +1,85 @@
+﻿@model Rabisque
+
+@{
+    ViewData["title"] = "Detalhes";
+}
+
+<div class="text-center">
+    <h1>Detalhes</h1>
+</div>
+<div>
+    <h4>Premium Gel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CodSistema)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CodSistema)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Linha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Linha)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DescProduto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescProduto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DescProdutoFiscal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescProdutoFiscal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnidadeSolto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnidadeSolto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cartucho)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cartucho)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CaixaEmbalagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CaixaEmbalagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumProcesso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumProcesso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QtdCaixa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QtdCaixa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QtdCartucho)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QtdCartucho)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NCM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NCM)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.RabisqueId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a> <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Volta para a lista</a>
+</div>
