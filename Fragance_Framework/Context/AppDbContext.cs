@@ -16,6 +16,7 @@ namespace Fragance_Framework.Context
         public DbSet<Premium>? Premium { get; set; }
         public DbSet<PremiumGel>? PremiumGel { get; set; }
         public DbSet<Rabisque>? Rabisque { get; set; }
+        public DbSet<RabisqueNovo>? RabisqueNovos { get; set; }
     }
 }
 
