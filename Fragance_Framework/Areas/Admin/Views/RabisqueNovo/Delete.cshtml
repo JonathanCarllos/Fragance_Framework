@@ -1,4 +1,4 @@
-﻿@model Rabisque
+﻿@model RabisqueNovo
 
 @{
     ViewData["title"] = "Delete";
@@ -81,7 +81,7 @@
 </div>
 <div>
     <form asp-action="Delete">
-        <input type="hidden" asp-for="RabisqueId" />
+        <input type="hidden" asp-for="RabisqueNovoId" />
         <input type="submit" value="Excluir" class="btn btn-danger" /> <a asp-action="Index" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i> Volta para a lista</a>
     </form>
 </div>

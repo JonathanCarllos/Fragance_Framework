@@ -33,6 +33,8 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("RabisqueNovoId,CodSistema,Linha,DescProduto,DescProdutoFiscal,UnidadeSolto," +
             "Cartucho,CaixaEmbalagem,NumProcesso,QtdCaixa,QtdCartucho,NCM")] RabisqueNovo rabisqueNovo)
         {
@@ -62,6 +64,8 @@ namespace Fragance_Framework.Areas.Admin.Controllers
             return View(editar);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? Id, [Bind("RabisqueNovoId,CodSistema,Linha,DescProduto,DescProdutoFiscal,UnidadeSolto," +
             "Cartucho,CaixaEmbalagem,NumProcesso,QtdCaixa,QtdCartucho,NCM")] RabisqueNovo rabisqueNovo)
         {

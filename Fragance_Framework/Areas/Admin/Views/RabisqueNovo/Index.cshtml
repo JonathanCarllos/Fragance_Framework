@@ -1,16 +1,17 @@
-﻿@model IEnumerable<PremiumGel>
+﻿@model IEnumerable<RabisqueNovo>
 
 @{
-    ViewData["Title"] = "Lista Premium Gel";
+    ViewData["Title"] = "Lista";
 }
 
 <div class="text-center">
-    <h3>Lista Premium Gel</h3>
+    <h1>Lista de Rabisque Novo</h1>
 </div>
 
 <p>
     <a asp-action="Create" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Criar um novo produto</a>
 </p>
+
 
 <table class="table" id="myTable">
     <thead>
@@ -47,9 +48,9 @@
                     @Html.DisplayFor(modelItem => item.DescProdutoFiscal)
                 </td>
                 <td align="right">
-                    <a asp-action="Edit" asp-route-id="@item.PremiumGelId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a asp-action="Details" asp-route-id="@item.PremiumGelId" class="btn btn-warning"><i class="fa-solid fa-circle-info"></i></a>
-                    <a asp-action="Delete" asp-route-id="@item.PremiumGelId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                    <a asp-action="Edit" asp-route-id="@item.RabisqueNovoId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.RabisqueNovoId" class="btn btn-warning"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.RabisqueNovoId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         }
