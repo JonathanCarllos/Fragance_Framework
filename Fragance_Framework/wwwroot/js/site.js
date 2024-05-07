@@ -6,7 +6,7 @@
 $('#myTable').DataTable({
     "ordering": true,
     "paging": true,
-    "searching": true,
+    "searching": true,  
     "oLanguage": {
         "sEmptyTable": "Nenhum registro encontrado na tabela",
         "sInfo": "Mostrar _START_ até _END_ de _TOTAL_ registros",
@@ -31,4 +31,3 @@ $('#myTable').DataTable({
         }
     }
 });
-
