@@ -90,6 +90,7 @@ namespace Fragance_Framework.Areas.Admin.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
             return View(alcool);
