@@ -18,6 +18,7 @@ namespace Fragance_Framework.Context
         public DbSet<Rabisque>? Rabisque { get; set; }
         public DbSet<RabisqueNovo>? RabisqueNovos { get; set; }
         public DbSet<Alcool>? Alcool { get; set; }
+        public DbSet<SosUnhas> SosUnhas { get; set; }
     }
 }
 
