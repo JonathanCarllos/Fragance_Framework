@@ -133,8 +133,8 @@ namespace Fragance_Framework.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmado(int? Id)
         {
-            var delete = _context.SosUnhas.FindAsync(Id);
-            _context.Remove(delete);
+            var delete = await  _context.SosUnhas.FindAsync(Id);
+            _context.SosUnhas.Remove(delete);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
