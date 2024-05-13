@@ -2,17 +2,14 @@
 
 @{
     ViewData["Title"] = "Lista de Envase";
+    //Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <div class="text-center">
     <h1>Lista de Envase Setup</h1>
 </div>
 
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table" id="myTable">
     <thead>
         <tr>
             <th>
@@ -59,9 +56,9 @@
                     @Html.DisplayFor(modelItem => item.ProducaoLiberada)
                 </td>
                 <td align="right">
-                    <a asp-action="Edit" asp-route-id="@item.EnvaseSetupId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.EnvaseSetupId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.EnvaseSetupId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.EnvaseSetupId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.EnvaseSetupId" class="btn btn-warning"><i class="fa-solid fa-circle-info"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.EnvaseSetupId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         }

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fragance_Framework.Context;
 using Fragance_Framework.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Fragance_Framework.Controllers
 {
+    [Authorize(Roles = "User")]
     public class EnvasesController : Controller
     {
         private readonly AppDbContext _context;
@@ -20,6 +22,7 @@ namespace Fragance_Framework.Controllers
         }
 
         // GET: Envases
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
               return _context.EnvasesSetup != null ? 
@@ -68,6 +71,7 @@ namespace Fragance_Framework.Controllers
         }
 
         // GET: Envases/Edit/5
+        [AllowAnonymous]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.EnvasesSetup == null)
@@ -88,6 +92,7 @@ namespace Fragance_Framework.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Edit(int id, [Bind("EnvaseSetupId,Nome,Produto,Equipe,Funcao,Data,Maquina,Frasco,Tampa,Responsavel,Polivalente,Referencia,Categoria,QtdPrevista,LoteNumEnvase,Validade,CorCodTampa,Intercorrencia,Observacao,HoraInicial,HoraFinal,QtdFinal,LimpezaInicio,LimpezaFinal,CodBulkGranel,HorarioAquecimentoFusor,Processo,DescricaoIntercorrencia,ProducaoLiberada")] Envase envase)
         {
             if (id != envase.EnvaseSetupId)
@@ -119,6 +124,7 @@ namespace Fragance_Framework.Controllers
         }
 
         // GET: Envases/Delete/5
+        [AllowAnonymous]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.EnvasesSetup == null)
@@ -139,6 +145,7 @@ namespace Fragance_Framework.Controllers
         // POST: Envases/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.EnvasesSetup == null)
