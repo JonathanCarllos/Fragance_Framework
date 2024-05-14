@@ -28,7 +28,19 @@
                         </div>
                         <div class="col-4">
                             <label asp-for="Equipe" class="control-label"></label>
-                            <input asp-for="Equipe" class="form-control" />
+                            <select asp-for="Equipe" class="form-select">
+                                <option value="">Selecione a equipe</option>
+                                <option value="Equipe 01">Equipe 01</option>
+                                <option value="Equipe 02">Equipe 02</option>
+                                <option value="Equipe 03">Equipe 03</option>
+                                <option value="Equipe 04">Equipe 04</option>
+                                <option value="Equipe 05">Equipe 05</option>
+                                <option value="Equipe 06">Equipe 06</option>
+                                <option value="Equipe 07">Equipe 07</option>
+                                <option value="Equipe 08">Equipe 08</option>
+                                <option value="Equipe 09">Equipe 09</option>
+                                <option value="Equipe 10">Equipe 10</option>
+                            </select>                           
                             <span asp-validation-for="Equipe" class="text-danger"></span>
                         </div>                      
                     </div>
@@ -177,11 +189,6 @@
             </div>
         </div>
     </div>
-</div>
-
-
-<div>
-    <a asp-action="Index">Volta para a lista</a>
 </div>
 
 @section Scripts {
